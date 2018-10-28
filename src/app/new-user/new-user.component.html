@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>New User Form</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<div mat-dialog-content>
+  <mat-form-field class="full-width">
+      <input matInput placeholder="Name" [formControl]='myForm.controls["name"]'>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+      <input matInput placeholder="Username" [formControl]='myForm.controls["username"]'>
+  </mat-form-field><br>
+
+  <mat-form-field class="full-width">
+      <input matInput placeholder="Email" [formControl]='myForm.controls["email"]'>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+      <input matInput placeholder="Phone" [formControl]='myForm.controls["phone"]'>
+  </mat-form-field><br>
+
+  <mat-form-field class="full-width">
+      <input matInput placeholder="Address"[formControl]='myForm.controls["address"]'>
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="City"[formControl]='myForm.controls["city"]'>
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="State" [formControl]='myForm.controls["state"]'>
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="Zip" [formControl]='myForm.controls["zip"]'>
+  </mat-form-field><br/>
+
+  <mat-form-field class="full-width">
+      <input matInput placeholder="Company" [formControl]='myForm.controls["company"]'>
+  </mat-form-field><br>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" class="btn-new-user" (click)="saveUser()"><i class="material-icons">done</i>Submit</button>
+</div>
+</form>
